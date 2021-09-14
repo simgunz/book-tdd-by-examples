@@ -6,4 +6,4 @@ class Dollar:
         return Dollar(self.amount * multiplier)
 
     def equals(self, dollar):
-        return True
+        return self.amount == dollar.amount

@@ -1,3 +1,7 @@
+class Money:
+    pass
+
+
 class Dollar:
     def __init__(self, amount):
         self._amount = amount

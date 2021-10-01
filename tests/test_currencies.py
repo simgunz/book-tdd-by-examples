@@ -12,6 +12,7 @@ class TestDollar(unittest.TestCase):
     def test_equality(self):
         self.assertEqual(Dollar(5), Dollar(5))
         self.assertNotEqual(Dollar(5), Dollar(6))
+        self.assertNotEqual(Dollar(5), Franc(5))
 
 
 class TestFranc(unittest.TestCase):

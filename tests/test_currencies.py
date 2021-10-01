@@ -1,6 +1,6 @@
 import unittest
 
-from money.dollar import Dollar, Franc
+from money.currencies import Dollar, Franc
 
 
 class TestDollar(unittest.TestCase):

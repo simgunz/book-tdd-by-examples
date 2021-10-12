@@ -6,6 +6,10 @@ class Money:
     def dollar(amount):
         return Dollar(amount)
 
+    @staticmethod
+    def franc(amount):
+        return Franc(amount)
+
     def __eq__(self, dollar):
         return self._amount == dollar._amount and isinstance(self, dollar.__class__)
 

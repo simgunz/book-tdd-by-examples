@@ -11,7 +11,7 @@ class Money(ABC):
 
     @staticmethod
     def franc(amount):
-        return Franc(amount)
+        return Franc(amount, "CHF")
 
     def __eq__(self, dollar):
         return self._amount == dollar._amount and isinstance(self, dollar.__class__)
@@ -30,9 +30,9 @@ class Dollar(Money):
 
 
 class Franc(Money):
-    def __init__(self, amount):
+    def __init__(self, amount, currency):
         super().__init__(amount)
-        self._currency = "CHF"
+        self._currency = currency
 
     def times(self, multiplier):
         return Money.franc(self._amount * multiplier)

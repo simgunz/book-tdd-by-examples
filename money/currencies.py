@@ -2,8 +2,9 @@ from abc import ABC, abstractmethod
 
 
 class Money(ABC):
-    def __init__(self, amount):
+    def __init__(self, amount, currency):
         self._amount = amount
+        self._currency = currency
 
     @staticmethod
     def dollar(amount):
@@ -21,18 +22,10 @@ class Money(ABC):
 
 
 class Dollar(Money):
-    def __init__(self, amount, currency):
-        super().__init__(amount)
-        self._currency = currency
-
     def times(self, multiplier):
         return Money.dollar(self._amount * multiplier)
 
 
 class Franc(Money):
-    def __init__(self, amount, currency):
-        super().__init__(amount)
-        self._currency = currency
-
     def times(self, multiplier):
         return Money.franc(self._amount * multiplier)

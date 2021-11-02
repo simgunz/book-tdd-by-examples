@@ -3,6 +3,12 @@ import unittest
 from money.currencies import Money
 
 
+class TestMoney(unittest.TestCase):
+    def test_currency(self):
+        self.assertEqual("USD", Money.dollar(1).currency())
+        self.assertEqual("CHF", Money.franc(1).currency())
+
+
 class TestDollar(unittest.TestCase):
     def test_multiplication(self):
         five = Money.dollar(5)

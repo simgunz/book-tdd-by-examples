@@ -14,6 +14,9 @@ class Money:
     def franc(amount):
         return Franc(amount, "CHF")
 
+    def __repr__(self):
+        return "Money(%s, %s)" % (self._amount, self._currency)
+
     def __eq__(self, other):
         return self._amount == other._amount and type(self) == type(other)
 

@@ -14,8 +14,8 @@ class Money(ABC):
     def franc(amount):
         return Franc(amount, "CHF")
 
-    def __eq__(self, dollar):
-        return self._amount == dollar._amount and isinstance(self, dollar.__class__)
+    def __eq__(self, other):
+        return self._amount == other._amount and type(self) == type(other)
 
     @abstractmethod
     def times(self, multiplier):

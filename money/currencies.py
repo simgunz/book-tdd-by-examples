@@ -27,9 +27,5 @@ class Money:
         return self._currency
 
 
-class Dollar(Money):
-    pass
-
-
 class Franc(Money):
     pass

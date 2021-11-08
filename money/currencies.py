@@ -20,19 +20,16 @@ class Money:
     def __eq__(self, other):
         return self._currency == other.currency() and self._amount == other._amount
 
-    @abstractmethod
     def times(self, multiplier):
-        pass
+        return Money(self._amount * multiplier, self._currency)
 
     def currency(self):
         return self._currency
 
 
 class Dollar(Money):
-    def times(self, multiplier):
-        return Money(self._amount * multiplier, self._currency)
+    pass
 
 
 class Franc(Money):
-    def times(self, multiplier):
-        return Franc(self._amount * multiplier, self._currency)
+    pass

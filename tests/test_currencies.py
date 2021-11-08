@@ -1,6 +1,6 @@
 import unittest
 
-from money.currencies import Money
+from currencies import Money
 
 
 class TestMoney(unittest.TestCase):

@@ -17,6 +17,10 @@ class Money(ABC):
     def __eq__(self, dollar):
         return self._amount == dollar._amount and isinstance(self, dollar.__class__)
 
+    @abstractmethod
+    def times(self, multiplier):
+        pass
+
     def currency(self):
         return self._currency
 

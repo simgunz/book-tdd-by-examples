@@ -1,7 +1,7 @@
-from abc import ABC, abstractmethod
+from abc import abstractmethod
 
 
-class Money(ABC):
+class Money:
     def __init__(self, amount, currency):
         self._amount = amount
         self._currency = currency

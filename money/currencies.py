@@ -8,11 +8,11 @@ class Money:
 
     @staticmethod
     def dollar(amount):
-        return Dollar(amount, "USD")
+        return Money(amount, "USD")
 
     @staticmethod
     def franc(amount):
-        return Franc(amount, "CHF")
+        return Money(amount, "CHF")
 
     def __repr__(self):
         return "Money(%s, %s)" % (self._amount, self._currency)

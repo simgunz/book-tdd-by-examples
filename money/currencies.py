@@ -18,7 +18,7 @@ class Money:
         return "Money(%s, %s)" % (self._amount, self._currency)
 
     def __eq__(self, other):
-        return self._amount == other._amount and type(self) == type(other)
+        return self._currency == other.currency() and self._amount == other._amount
 
     @abstractmethod
     def times(self, multiplier):

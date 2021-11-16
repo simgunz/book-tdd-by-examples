@@ -17,3 +17,7 @@ class TestMoney(unittest.TestCase):
         self.assertEqual(Money.dollar(5), Money.dollar(5))
         self.assertNotEqual(Money.dollar(5), Money.dollar(6))
         self.assertNotEqual(Money.dollar(5), Money.franc(5))
+
+    def test_simple_addition(self):
+        sum = Money.dollar(5).plus(Money.dollar(5))
+        self.assertEqual(Money.dollar(10), sum)

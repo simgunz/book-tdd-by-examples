@@ -1,6 +1,3 @@
-from finance.sum import Sum
-
-
 class Money:
     def __init__(self, amount, currency):
         self.amount = amount
@@ -27,4 +24,6 @@ class Money:
         return self._currency
 
     def plus(self, addend):
+        from finance.sum import Sum
+
         return Sum(self, addend)

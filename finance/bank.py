@@ -3,4 +3,5 @@ from finance.currencies import Money
 
 class Bank:
     def reduce(self, source, to):
-        return Money.dollar(10)
+        amount = source.augend.amount + source.addend.amount
+        return Money.dollar(amount)

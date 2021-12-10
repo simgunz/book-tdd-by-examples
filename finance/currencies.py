@@ -28,9 +28,6 @@ class Money:
 
         return Sum(self, addend)
 
-    def reduce(self, to):
-        if self.currency() == "CHF" and to == "USD":
-            rate = 2
-        else:
-            rate = 1
+    def reduce(self, bank, to):
+        rate = bank.rate(self._currency, to)
         return Money(self.amount / rate, to)

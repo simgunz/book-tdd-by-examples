@@ -18,3 +18,6 @@ class Sum:
 
     def plus(self, addend: Union[Money, Sum]):
         return Sum(self, addend)
+
+    def times(self, multiplier: int):
+        return Sum(self.addend.times(multiplier), self.augend.times(multiplier))

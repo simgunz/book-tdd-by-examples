@@ -1,3 +1,6 @@
+from __future__ import annotations
+from typing import Union
+
 from finance.currencies import Money
 from finance.bank import Bank
 
@@ -12,3 +15,6 @@ class Sum:
             self.augend.reduce(bank, to).amount + self.addend.reduce(bank, to).amount
         )
         return Money(amount, to)
+
+    def plus(self, addend: Union[Money, Sum]):
+        return Sum(self, addend)

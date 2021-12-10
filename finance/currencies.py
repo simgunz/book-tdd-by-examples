@@ -27,3 +27,6 @@ class Money:
         from finance.sum import Sum
 
         return Sum(self, addend)
+
+    def reduce(self, to):
+        return self

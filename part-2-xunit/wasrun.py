@@ -3,4 +3,4 @@ class WasRun:
         self.wasRun = False
 
     def testMethod(self):
-        pass
+        self.wasRun = True

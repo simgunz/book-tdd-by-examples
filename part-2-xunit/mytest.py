@@ -13,6 +13,7 @@ class TestCase:
         method = getattr(self, self.name)
         method()
         self.tearDown()
+        return TestResult()
 
 
 class WasRun(TestCase):
@@ -30,3 +31,8 @@ class WasRun(TestCase):
 
     def tearDown(self):
         self.log += "tearDown "
+
+
+class TestResult:
+    def summary(self):
+        return "1 run, 0 failed"

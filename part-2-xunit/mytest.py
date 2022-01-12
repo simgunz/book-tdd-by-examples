@@ -19,6 +19,7 @@ class WasRun(TestCase):
     def setUp(self):
         self.wasRun = None
         self.wasSetUp = True
+        self.log = "setUp "
 
     def testMethod(self):
         self.wasRun = True

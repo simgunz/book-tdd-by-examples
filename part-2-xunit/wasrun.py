@@ -1,9 +1,11 @@
 class WasRun:
     def __init__(self, name) -> None:
-        self.wasRun = False
+        self.wasRun = None
+        self.name = name
 
     def testMethod(self):
         self.wasRun = True
 
     def run(self):
-        self.testMethod()
+        method = getattr(self, self.name)
+        method()

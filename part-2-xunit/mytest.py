@@ -57,3 +57,11 @@ class TestResult:
 
     def summary(self):
         return f"{self.runCount} run, {self.errorCount} failed"
+
+
+class TestSuite:
+    def __init__(self):
+        self.tests = []
+
+    def add(self, test):
+        self.tests.append(test)

@@ -1,4 +1,4 @@
-from mytest import TestCase, TestResult, WasRun
+from mytest import TestCase, TestResult, TestSuite, WasRun
 
 
 class TestCaseTest(TestCase):
